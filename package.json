@@ -1,6 +1,6 @@
 {
   "name": "electron-quick-start",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "A minimal Electron application with auto update feature.",
   "main": "main.js",
   "build": {
