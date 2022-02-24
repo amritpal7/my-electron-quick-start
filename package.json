@@ -1,12 +1,27 @@
 {
   "name": "electron-quick-start",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "A minimal Electron application with auto update feature.",
   "main": "main.js",
-  "scripts": {
-    "start": "electron ."
+  "build": {
+    "appId": "com.myNew.updater",
+    "productName": "auto_updater",
+    "copyright": "Copyright © year amritpal",
+    "mac": {
+      "category": "public.app-category.developer-tools",
+      "type": "distribution"
+    },
+    "publish": [
+      "github"
+    ]
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --x64 --mac",
+    "gh-publish": "electron-builder --x64 --mac -p always",
+    "bundle": "webpack"
+  },
+  "repository": "git+https://github.com/amritpal7/my-electron-quick-start.git",
   "keywords": [
     "Electron",
     "quick",
@@ -17,6 +32,9 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^17.0.1"
+    "electron": "^17.0.1",
+    "electron-builder": "^22.14.13",
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2"
   }
 }
