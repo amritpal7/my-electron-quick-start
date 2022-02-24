@@ -5,10 +5,22 @@
 // selectively enable features needed in the rendering
 // process.
 const { ipcRenderer } = require("electron");
-const version = document.getElementById("version");
+// const appVersion = document.getElementById("version");
+const select = selector => document.querySelector(selector);
+
+let container = select("#messages");
+// let progressBar = select("#progressBar");
+let version = select("#version");
+
+ipcRenderer.on("message", (event, text) => {
+  let message = document.createElement("div");
+  message.innerHTML = text;
+  container.appendChild(message);
+});
 
 ipcRenderer.send("app_version");
+
 ipcRenderer.on("app_version", (event, arg) => {
   ipcRenderer.removeAllListeners("app_version");
-  version.innerText = "Version " + arg.version;
+  version.innerText = "App version " + arg.version;
 });
