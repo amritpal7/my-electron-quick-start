@@ -19,7 +19,7 @@
     "start": "electron .",
     "exp-token": "export GH_TOKEN=process.env.TOKEN",
     "build": "electron-builder build --mac --win --publish never",
-    "deploy": "electron-builder build --mac --win --publish always",
+    "deploy": "electron-builder build --x64 --mac --win -p always",
     "dist": "electron-builder --x64 --mac",
     "gh-publish": "electron-builder --x64 --mac -p always",
     "bundle": "webpack"
