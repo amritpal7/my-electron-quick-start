@@ -1,6 +1,6 @@
 {
   "name": "electron-quick-start",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A minimal Electron application with auto update feature.",
   "main": "main.js",
   "build": {
@@ -17,7 +17,7 @@
   },
   "scripts": {
     "start": "electron .",
-    "exp-token": "export GH_TOKEN=process.env.GH_TOKEN",
+    "exp-token": "export GH_TOKEN=process.env.TOKEN",
     "dist": "electron-builder --x64 --mac",
     "gh-publish": "electron-builder --x64 --mac -p always",
     "bundle": "webpack"
