@@ -14,6 +14,7 @@
     "publish": [
       {
         "provider": "github",
+        "owner": "amritpal7",
         "url": "git+https://github.com/amritpal7/my-electron-quick-start.git",
         "repo": "my-electron-quick-start"
       }
