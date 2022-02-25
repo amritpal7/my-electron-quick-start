@@ -12,7 +12,11 @@
       "type": "distribution"
     },
     "publish": [
-      "github"
+      {
+        "provider": "github",
+        "url": "git+https://github.com/amritpal7/my-electron-quick-start.git",
+        "repo": "my-electron-quick-start"
+      }
     ]
   },
   "scripts": {
